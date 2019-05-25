@@ -1,0 +1,136 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "Category",
+            "name": "category",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "F_Company",
+            "name": "industry",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Value",
+            "name": "measure_1",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "Growth",
+            "name": "measure_2",
+            "kind": "Measure"
+        }
+    ],
+    "objects": {
+    "Arc": {
+        "displayName": "Custom Style",
+        "properties": {
+            "backgroud_bar": {
+                "displayName": "Background Bar",
+                "description": "The fill color of the rect.",
+                "type": {
+                    "fill": {
+                        "solid": {
+                            "color": true
+                        }
+                    }
+                }
+            },
+            "first_bar": {
+                "displayName": "First Bar",
+                "description": "The fill color of the rect.",
+                "type": {
+                    "fill": {
+                        "solid": {
+                            "color": true
+                        }
+                    }
+                }
+            },
+            "seconed_bar": {
+                "displayName": "Seconed Bar",
+                "description": "The fill color of the rect.",
+                "type": {
+                    "fill": {
+                        "solid": {
+                            "color": true
+                        }
+                    }
+                }
+            },
+            "text_postive": {
+                "displayName": "text postive",
+                "description": "The fill color of the rect.",
+                "type": {
+                    "fill": {
+                        "solid": {
+                            "color": true
+                        }
+                    }
+                }
+            },
+            "text_negative": {
+                "displayName": "text negative",
+                "description": "The fill color of the rect.",
+                "type": {
+                    "fill": {
+                        "solid": {
+                            "color": true
+                        }
+                    }
+                }
+            },
+            "growth_chart_text": {
+                "displayName": "Growth Rect Text",
+                "description": "Rotation of axis text",
+                "type": {
+                    "numeric":true
+                }
+            },
+            "axis_text_size": {
+                "displayName": "axis text",
+                "description": "Size of axis text",
+                "type": {
+                    "numeric":true
+                }
+            }
+       
+
+        }
+    }
+
+    },
+    "dataViewMappings": [
+        {
+            "categorical": {
+                "categories": {
+                    "for": {
+                        "in": "category"
+                    }
+                },
+                "values": {
+                    "group": {
+                        "by": "industry",
+                        "select": [{
+                                "for": {
+                                    "in": "measure_1"
+                                }
+                                
+                            },
+                            {
+                                "for": {
+                                    "in": "measure_2"
+                                }
+                                
+                            }
+
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}
+
+//["#363636","#636363","#898989","#959595","#acacac","#c2c2c2","#fbaf5d","#f69679","#f26c4f","#fd9ba2","#fb5c67","#fd2030","#b50d19","#840710"]
+
